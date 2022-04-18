@@ -39,6 +39,7 @@ const App = () => {
         <label>User ID</label>
         <br />
         <input
+          autoFocus
           type='text'
           name='user_id'
           onChange={formik.handleChange}
