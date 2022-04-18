@@ -12,7 +12,7 @@ const App = () => {
       content: '',
       image: '',
     },
-    onSubmit: (values) => {
+    onSubmit: (values, {resetForm}) => {
       console.log(values);
 
       const formData = new FormData();
@@ -26,6 +26,7 @@ const App = () => {
       axios.post(url, formData).then((res) => {
         setPosts(posts.concat(res.data));
       });
+      resetForm({})
     }
   });
 
